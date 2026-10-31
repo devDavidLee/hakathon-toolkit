@@ -1,0 +1,33 @@
+# ===== hakathon-toolkit MCP (공개 저장소 패키지, 버전 고정) =====
+# 필요 없는 서버는 enabled = false 로 끄면 된다. node(npx) 와 uv(uvx) 가 있어야 한다.
+# 시험 환경에서 npm/pypi 접근이 막혀 있으면 이 섹션은 통째로 지워도 스킬은 그대로 동작한다.
+
+# 라이브러리 최신 공식 문서 조회 (pandas, sklearn, fastapi, streamlit 등 API 헷갈릴 때)
+# 출처: github.com/upstash/context7 (MIT)
+[mcp_servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp@4.4.4"]
+enabled = true
+startup_timeout_sec = 30
+
+# 단계별 사고 정리 (문제 분해, 설계 비교)
+# 출처: github.com/modelcontextprotocol/servers (MIT)
+[mcp_servers.sequential-thinking]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-sequential-thinking@2.0.0"]
+enabled = true
+
+# 웹 페이지 본문 가져오기 (문서·데이터 설명 페이지 읽기)
+# 출처: github.com/modelcontextprotocol/servers (MIT)
+[mcp_servers.fetch]
+command = "uvx"
+args = ["mcp-server-fetch==2026.10.28"]
+enabled = true
+
+# 브라우저 자동화 (만든 웹 데모를 직접 띄워 클릭·스크린샷으로 검증)
+# 출처: github.com/microsoft/playwright-mcp (Apache-2.0)
+[mcp_servers.playwright]
+command = "npx"
+args = ["-y", "@playwright/mcp@0.0.83", "--headless"]
+enabled = false   # 웹 데모 만들 때만 true 로
+# ===== /hakathon-toolkit MCP =====

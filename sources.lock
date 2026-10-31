@@ -1,0 +1,42 @@
+# 외부 스킬 출처 (전부 공개 저장소, 커밋 SHA 고정)
+# 형식: <profile> <owner/repo> <commit_sha> <repo 안의 스킬 경로>
+# profile: core = 항상 설치 / data = 데이터 분석 / product = 제품·앱 개발 / extra = 필요할 때만
+#
+# 라이선스: openai/skills(Apache-2.0), anthropics/skills 중 아래 3개(Apache-2.0),
+#           obra/superpowers(MIT), forrestchang/andrej-karpathy-skills(MIT), K-Dense-AI/claude-scientific-skills(MIT)
+# anthropics/skills 의 docx/xlsx/pptx/pdf 는 오픈소스 라이선스가 아니라서 넣지 않았다.
+
+# ---- core: 코딩 원칙 · 계획 · 디버깅 · 검증 ----
+core    forrestchang/andrej-karpathy-skills  2c606141936f1eeef17fa3043a72095b4765b9c2  skills/karpathy-guidelines
+core    obra/superpowers                     2ce8aa15d05bd57213e6f746f953aafb7ded7a8b  skills/brainstorming
+core    obra/superpowers                     2ce8aa15d05bd57213e6f746f953aafb7ded7a8b  skills/writing-plans
+core    obra/superpowers                     2ce8aa15d05bd57213e6f746f953aafb7ded7a8b  skills/executing-plans
+core    obra/superpowers                     2ce8aa15d05bd57213e6f746f953aafb7ded7a8b  skills/systematic-debugging
+core    obra/superpowers                     2ce8aa15d05bd57213e6f746f953aafb7ded7a8b  skills/verification-before-completion
+core    openai/skills                        49f948faa9258a0c61caceaf225e179651397431  skills/.curated/define-goal
+
+# ---- data: EDA · 통계 · ML · 시각화 ----
+data    K-Dense-AI/claude-scientific-skills  5f2bc0341354fd5590aef76a533ada1e1e5b4e62  skills/exploratory-data-analysis
+data    K-Dense-AI/claude-scientific-skills  5f2bc0341354fd5590aef76a533ada1e1e5b4e62  skills/statistical-analysis
+data    K-Dense-AI/claude-scientific-skills  5f2bc0341354fd5590aef76a533ada1e1e5b4e62  skills/scikit-learn
+data    K-Dense-AI/claude-scientific-skills  5f2bc0341354fd5590aef76a533ada1e1e5b4e62  skills/polars
+data    K-Dense-AI/claude-scientific-skills  5f2bc0341354fd5590aef76a533ada1e1e5b4e62  skills/matplotlib
+data    K-Dense-AI/claude-scientific-skills  5f2bc0341354fd5590aef76a533ada1e1e5b4e62  skills/seaborn
+data    K-Dense-AI/claude-scientific-skills  5f2bc0341354fd5590aef76a533ada1e1e5b4e62  skills/shap
+data    openai/skills                        49f948faa9258a0c61caceaf225e179651397431  skills/.curated/jupyter-notebook
+
+# ---- product: 웹앱 · UI · 테스트 · 보안 ----
+product anthropics/skills                    ca45fc496a3436251f191354091d557da31c15b5  skills/frontend-design
+product anthropics/skills                    ca45fc496a3436251f191354091d557da31c15b5  skills/webapp-testing
+product obra/superpowers                     2ce8aa15d05bd57213e6f746f953aafb7ded7a8b  skills/test-driven-development
+product openai/skills                        49f948faa9258a0c61caceaf225e179651397431  skills/.curated/playwright
+product openai/skills                        49f948faa9258a0c61caceaf225e179651397431  skills/.curated/security-best-practices
+
+# ---- extra: 문제 유형 보고 필요하면 --profile extra ----
+extra   K-Dense-AI/claude-scientific-skills  5f2bc0341354fd5590aef76a533ada1e1e5b4e62  skills/statsmodels
+extra   K-Dense-AI/claude-scientific-skills  5f2bc0341354fd5590aef76a533ada1e1e5b4e62  skills/timesfm-forecasting
+extra   K-Dense-AI/claude-scientific-skills  5f2bc0341354fd5590aef76a533ada1e1e5b4e62  skills/transformers
+extra   K-Dense-AI/claude-scientific-skills  5f2bc0341354fd5590aef76a533ada1e1e5b4e62  skills/pytorch-lightning
+extra   K-Dense-AI/claude-scientific-skills  5f2bc0341354fd5590aef76a533ada1e1e5b4e62  skills/umap-learn
+extra   anthropics/skills                    ca45fc496a3436251f191354091d557da31c15b5  skills/mcp-builder
+extra   openai/skills                        49f948faa9258a0c61caceaf225e179651397431  skills/.curated/pdf
